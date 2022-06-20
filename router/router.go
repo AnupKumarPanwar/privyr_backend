@@ -2,6 +2,7 @@ package router
 
 import (
 	"privyr/api"
+	"privyr/api/v1/public/onboarding"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,4 +16,12 @@ func Setup() {
 	Router.Use(gin.Recovery())
 
 	Router.GET("/ping", api.Status)
+
+	v1 := Router.Group("v1")
+	{
+		public := v1.Group("")
+		{
+			onboarding.AddRoutes(public)
+		}
+	}
 }
