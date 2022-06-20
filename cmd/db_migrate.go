@@ -24,7 +24,7 @@ func (migrationLogger MigrationLogger) Verbose() bool {
 }
 
 func DbMigrate() {
-	db, err := sql.Open(conf.DatabaseConf.Driver, fmt.Sprintf("user=%s dbname=%s sslmode=%s password=%s", conf.DatabaseConf.Username, conf.DatabaseConf.DbName, conf.DatabaseConf.SslMode, conf.DatabaseConf.Password))
+	db, err := sql.Open(conf.DatabaseConf.Driver, fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s", conf.DatabaseConf.Host, conf.DatabaseConf.Port, conf.DatabaseConf.Username, conf.DatabaseConf.Password, conf.DatabaseConf.DbName, conf.DatabaseConf.SslMode))
 	if err != nil {
 		zap.L().Fatal(err.Error())
 	}

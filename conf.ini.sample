@@ -11,7 +11,7 @@ ReadTimeout=60
 WriteTimeout=60
 
 [database]
-Driver=postgres̵
+Driver=postgres
 Username=privyr
 Password="#Privyr@123"
 Host=localhost
