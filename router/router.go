@@ -2,6 +2,7 @@ package router
 
 import (
 	"privyr/api"
+	"privyr/api/v1/public/leads"
 	"privyr/api/v1/public/onboarding"
 	"privyr/api/v1/public/webhook"
 
@@ -24,6 +25,7 @@ func Setup() {
 		{
 			onboarding.AddRoutes(public)
 			webhook.AddRoutes(public)
+			leads.AddRoutes(public)
 		}
 	}
 }
