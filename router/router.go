@@ -3,6 +3,7 @@ package router
 import (
 	"privyr/api"
 	"privyr/api/v1/public/onboarding"
+	"privyr/api/v1/public/webhook"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,6 +23,7 @@ func Setup() {
 		public := v1.Group("")
 		{
 			onboarding.AddRoutes(public)
+			webhook.AddRoutes(public)
 		}
 	}
 }
