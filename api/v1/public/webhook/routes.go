@@ -7,5 +7,6 @@ func AddRoutes(route *gin.RouterGroup) {
 	{
 		routeGroup.POST("/", Create)
 		routeGroup.GET("/:user_id", All)
+		routeGroup.POST("/:webhook_id", Listener)
 	}
 }
