@@ -1,6 +1,6 @@
 [app]
 Name=privyr
-LogSavePath="/var/log/privyr/"
+LogSavePath="/var/log/"
 LogSaveName=server.log
 
 [server]
