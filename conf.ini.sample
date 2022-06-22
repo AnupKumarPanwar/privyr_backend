@@ -6,7 +6,7 @@ LogSaveName=server.log
 [server]
 RunMode=debug
 Host=0.0.0.0
-Port=8080
+Port=8008
 ReadTimeout=60
 WriteTimeout=60
 
