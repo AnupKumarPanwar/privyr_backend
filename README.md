@@ -32,6 +32,12 @@ USER privyr WITH SUPERUSER;
 
 ### Step 2
 
+Connect to `privy` database;
+
+```
+\c privyr
+```
+
 Create uuid extension.
 
 ```sql
@@ -45,10 +51,27 @@ EXTENSION IF NOT EXISTS "uuid-ossp";
 values.
 
 ```shell script
-cp pkg/conf/conf.ini.sample pkg/conf/conf.ini
+cp conf.ini.sample conf.ini
 ```
 
 ### Step 4
+
+Run Migrations
+
+```shell script
+go run main.go db:migrate
+```
+
+Other db commands (NOT TO RUN UNLESS REQUIRED)
+```shell script
+go run main.go db:drop
+```
+```
+go run main.go db:create
+```
+
+
+### Step 5
 
 Run server
 
