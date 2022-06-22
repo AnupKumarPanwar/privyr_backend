@@ -37,5 +37,5 @@ func Create(c *gin.Context) {
 	}
 
 	tx.Commit()
-	c.JSON(http.StatusOK, gin.H{"data": gin.H{"id": webhook.ID}})
+	c.JSON(http.StatusOK, gin.H{"data": gin.H{"id": webhook.ID, "name": webhook.Name}})
 }

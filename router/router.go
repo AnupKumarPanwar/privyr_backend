@@ -6,6 +6,7 @@ import (
 	"privyr/api/v1/public/onboarding"
 	"privyr/api/v1/public/webhook"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,6 +17,8 @@ func Setup() {
 
 	Router.Use(gin.Logger())
 	Router.Use(gin.Recovery())
+
+	Router.Use(cors.Default())
 
 	Router.GET("/ping", api.Status)
 
